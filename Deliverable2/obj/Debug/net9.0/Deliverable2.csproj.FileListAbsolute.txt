@@ -1,0 +1,15 @@
+/Users/briacaduesette/Deliverable2/bin/Debug/net9.0/Deliverable2
+/Users/briacaduesette/Deliverable2/bin/Debug/net9.0/Deliverable2.deps.json
+/Users/briacaduesette/Deliverable2/bin/Debug/net9.0/Deliverable2.runtimeconfig.json
+/Users/briacaduesette/Deliverable2/bin/Debug/net9.0/Deliverable2.dll
+/Users/briacaduesette/Deliverable2/bin/Debug/net9.0/Deliverable2.pdb
+/Users/briacaduesette/Deliverable2/obj/Debug/net9.0/Deliverable2.GeneratedMSBuildEditorConfig.editorconfig
+/Users/briacaduesette/Deliverable2/obj/Debug/net9.0/Deliverable2.AssemblyInfoInputs.cache
+/Users/briacaduesette/Deliverable2/obj/Debug/net9.0/Deliverable2.AssemblyInfo.cs
+/Users/briacaduesette/Deliverable2/obj/Debug/net9.0/Deliverable2.csproj.CoreCompileInputs.cache
+/Users/briacaduesette/Deliverable2/obj/Debug/net9.0/Deliverable2.sourcelink.json
+/Users/briacaduesette/Deliverable2/obj/Debug/net9.0/Deliverable2.dll
+/Users/briacaduesette/Deliverable2/obj/Debug/net9.0/refint/Deliverable2.dll
+/Users/briacaduesette/Deliverable2/obj/Debug/net9.0/Deliverable2.pdb
+/Users/briacaduesette/Deliverable2/obj/Debug/net9.0/Deliverable2.genruntimeconfig.cache
+/Users/briacaduesette/Deliverable2/obj/Debug/net9.0/ref/Deliverable2.dll
