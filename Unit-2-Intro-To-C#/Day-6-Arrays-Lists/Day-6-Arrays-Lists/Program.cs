@@ -1,4 +1,6 @@
-﻿namespace Day_6_Arrays_Lists;
+﻿using System.Globalization;
+
+namespace Day_6_Arrays_Lists;
 
 // This program will ask for three numbers
 //      add them together and display the total
@@ -7,19 +9,34 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Define the variables to hold the numbers we need to add
-        int number1 = 0; // Since we will be doing math it needs to be numeric
-        int number2 = 0; // Since we will be doing math it needs to be numeric
-        int number3 = 0; // Since we will be doing math it needs to be numeric
+        // Define tana array to hold 3 numbers
+        int[] numbers = new int[3];
+    }
 
-        // Define a variable to hold the sum of the numbers
-        int sum = 0;
+    // Define a variable to hold the sum of the numbers
+    int sum = 0;
 
-        Console.WriteLine("--- Starting program ---");
+    Console.WriteLine("--- Starting program ---");
 
-        // Ask for the numbers one at time using the C# Console object
+    // Normally we process an array from beginning to end
+    // (from the first element to last element, one at a time0
+    //
+    // a or- lopp will loop through a process counting as it does 
+    // a for loop is an excellent tool for processing an array from start to end
+    //
+    // standard syntax: for (i=0; i < arrayName.Length; i++)
+
+    for (int i = 0; i<NumberStyles.Length;
+    i++)
+
+    Console.WriteLine("Element# " + is: " + numbers[i]);
+    sum = sum + numbers[i]; // add the current number in the array to sum
+}
+
+// Ask for the numbers one at time using the C# Console object
         //     which represents the keyboard and screen
         // Console.ReadLine() returns a string from keyboard - cannot store in an int
+       
         Console.WriteLine("Please enter a number:  "); // Asking for the number
         string theResponse; // Define a string to hold the line of input from the keyboard
         theResponse = Console.ReadLine(); // Get a line from the keyboard
@@ -40,6 +57,11 @@ class Program
        
         // Tell the requester the sum/total (display)
         Console.WriteLine("The sum is: " + sum);
+        
+        // Tell the requestor the avaerage of the numbers
+        // divides the sum by the number of elements (arrayname.Length)
+
+        Console.WriteLine("The average of the numbers is: " + sum / numbers.Length);
 
         Console.WriteLine("--- Ending program ---");
     }
