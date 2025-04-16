@@ -149,6 +149,17 @@ class Program
                 // Get the input from the user
                 string userInput = Console.ReadLine();
 
+                // Some exceptions may cause an Exception during processing
+                // An exceptio is a error that occurs when the program runs (aka Runtime Exception)
+                // When an exception occurs a crptic error message is displayed and the program stops
+                
+                //You can handle an exception and let the program continue
+                // with a try/catch blocks
+                //
+                // catch (exception-to-handle name-for-exception-object)
+                
+                
+                
                 try // We want to handle an Exception that might occur in this block of code
                 {
                     // Convert the user input to a double
