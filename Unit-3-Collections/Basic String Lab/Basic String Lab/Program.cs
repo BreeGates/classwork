@@ -42,6 +42,9 @@ namespace WordProcessingApp
             string choice;
             do
             {
+                
+            } while (expression);
+            {
                 Console.Write("Enter a sentence: ");
                 string sentence = Console.ReadLine();
                 string[] words = sentence.Split(' ', StringSplitOptions.RemoveEmptyEntries);
@@ -61,6 +64,7 @@ namespace WordProcessingApp
             List<string> collected = new List<string>();
             string choice;
             do
+            {
             {
                 Console.Write("Enter some text: ");
                 string text = Console.ReadLine();
