@@ -88,6 +88,7 @@ namespace ShoppingListLab
             if (cart.Count > 0)
             {
                 double average = total / cart.Count;
+                Console.Read();
             }
         }
     }
