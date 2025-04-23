@@ -70,6 +70,8 @@ internal class Program
             //
             // Note use of var type to hold the result of .Where()
 
+            
+            
             var matchingEntries =
                 starFleetPersonnel.Where(anEntry => anEntry.ToLower().Contains(searchString.ToLower()));
 
