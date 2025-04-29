@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using System.Runtime.Intrinsics.X86;
 
 namespace Day_1_Student_Class_Example;
 
@@ -31,9 +30,9 @@ class Program
     scores.Add(80);
 
     List<double> scores2 = new List<double>();
-    scores2.Add(78);
-    scores2.Add(80);
-    scores2.Add(60);
+    scores2.Add(100);
+    scores2.Add(100);
+    scores2.Add(100);
 
 // Defining an object of a class is very similar to defining any other datatype
 
@@ -45,50 +44,10 @@ class Program
 //  ClassName objName = new ClassName(initial-name, initial-scores)    
     Student aStudent  = new Student("Frank", scores);     // Calling the 2-arg ctor that takes a name and scores
     Student aStudent2 = new Student("Marquise", scores2); // Calling the 2-arg ctor that takes a name and scores
-        
+    
     // Display the Student object we created
     // Console.WriteLine() does not now how to display an object of our class
     Console.WriteLine("aStudent: " + aStudent);
-    // Console.WriteLine() displays strings on the screen
-    // It expects everything you ask it to display to be a string
-<<<<<<< HEAD
-    //If given a non string value , it trys to convert it to sa string
-    // the way it trys to convert to a string:
-    //
-    // 1. Looks at the datatype of what you are trying to display
-    // 2. It determines if there is  a method availabe to convert data type to a string
-    // primative types (int, double, bool etc) all have methods to 
-    // convert them to strings
-    //
-    // objects must have a method defined in their class to 
-    // return a string version of its data
-    // the method it looks for is called ToString()
-    //
-    // if a class does not have a ToString() method
-    // C# returns Namespace.ClassName.ClassName for any object of the class
-=======
-    // If given a non-string value, it trys to convert it to a string
-    // The way it trys to convert to a string:
-    //
-    //   1. Looks at the datatype of what you are trying to display
-    //   2. It determines if there is a method available to convert the
-    //         data type to a string
-    //
-    //      primitive types (int, double, bool etc) al have methods to
-    //      convert them to strings
-    //
-    //      objects must have a method defined in their class to
-    //              return a string version of its data
-    //
-    //      the method it looks for is called ToString()
-    //
-    //      if a class does not have a ToString() method
-    //         C# returns Namespace.ClassName for any object of the class
-    
-    
-    
->>>>>>> 2ae559e5d2cbf4b955092e4af9898e817eb42660
-    
     
     // Use the Student class method to display Student class object
     //
@@ -104,8 +63,8 @@ class Program
     johnTheStudent.AddScore(86);
     johnTheStudent.AddScore(90);
     johnTheStudent.AddScore(20);
-    johnTheStudent.AddScore(67);
-    johnTheStudent.AddScore(99);
+    johnTheStudent.AddScore(67.5);
+    johnTheStudent.AddScore(99.1);
     
     johnTheStudent.ShowStudent();  // Display the data in the Student Object
     
@@ -115,31 +74,7 @@ class Program
     
     Console.WriteLine($"\nThe sum of scores: {johnTheStudent.SumOfScores()}");
     Console.WriteLine($"\nThe avg of scores: {johnTheStudent.AvgOfScores()}");
-    
-    // I want see just the name of a Student
-    // Use have to a getter (if it exists) to access the data
 
-<<<<<<< HEAD
-    // I want to see the name of a Student
-    
-    Console.WriteLine($"aStudent object has the name {aStudent.GetStudentName()}");
-    Console.WriteLine($"aStudent object has the name {aStudent2.GetStudentName()}");
-=======
-    Console.WriteLine($"aStudent object has the name {aStudent.GetStudentName()}");
-    Console.WriteLine($"aStudent2 object has the name {aStudent2.GetStudentName()}");
->>>>>>> 2ae559e5d2cbf4b955092e4af9898e817eb42660
-    
-    // Change the name of aStudent
-    aStudent.SetStudentName("Pete");
-    aStudent.ShowStudent();
-<<<<<<< HEAD
-    
-=======
-
->>>>>>> 2ae559e5d2cbf4b955092e4af9898e817eb42660
-    List<double> newScores = new List<double>();
-    newScores.Add(0);
-    aStudent.SetTestScores(newScores);
-    aStudent.ShowStudent();
+    //Console.WriteLine(aStudent.studentName);
     }
 }
