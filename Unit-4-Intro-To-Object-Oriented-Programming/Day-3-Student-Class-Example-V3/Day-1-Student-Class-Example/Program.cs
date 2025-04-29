@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Runtime.Intrinsics.X86;
 
 namespace Day_1_Student_Class_Example;
 
@@ -30,9 +31,9 @@ class Program
     scores.Add(80);
 
     List<double> scores2 = new List<double>();
-    scores2.Add(100);
-    scores2.Add(100);
-    scores2.Add(100);
+    scores2.Add(78);
+    scores2.Add(80);
+    scores2.Add(60);
 
 // Defining an object of a class is very similar to defining any other datatype
 
@@ -48,6 +49,23 @@ class Program
     // Display the Student object we created
     // Console.WriteLine() does not now how to display an object of our class
     Console.WriteLine("aStudent: " + aStudent);
+    // Console.WriteLine() displays strings on the screen
+    // It expects everything you ask it to display to be a string
+    //If given a non string value , it trys to convert it to sa string
+    // the way it trys to convert to a string:
+    //
+    // 1. Looks at the datatype of what you are trying to display
+    // 2. It determines if there is  a method availabe to convert data type to a string
+    // primative types (int, double, bool etc) all have methods to 
+    // convert them to strings
+    //
+    // objects must have a method defined in their class to 
+    // return a string version of its data
+    // the method it looks for is called ToString()
+    //
+    // if a class does not have a ToString() method
+    // C# returns Namespace.ClassName.ClassName for any object of the class
+    
     
     // Use the Student class method to display Student class object
     //
@@ -63,8 +81,8 @@ class Program
     johnTheStudent.AddScore(86);
     johnTheStudent.AddScore(90);
     johnTheStudent.AddScore(20);
-    johnTheStudent.AddScore(67.5);
-    johnTheStudent.AddScore(99.1);
+    johnTheStudent.AddScore(67);
+    johnTheStudent.AddScore(99);
     
     johnTheStudent.ShowStudent();  // Display the data in the Student Object
     
@@ -75,6 +93,18 @@ class Program
     Console.WriteLine($"\nThe sum of scores: {johnTheStudent.SumOfScores()}");
     Console.WriteLine($"\nThe avg of scores: {johnTheStudent.AvgOfScores()}");
 
-    //Console.WriteLine(aStudent.studentName);
+    // I want to see the name of a Student
+    
+    Console.WriteLine($"aStudent object has the name {aStudent.GetStudentName()}");
+    Console.WriteLine($"aStudent object has the name {aStudent2.GetStudentName()}");
+    
+    // Change the name of aStudent
+    aStudent.SetStudentName("Pete");
+    aStudent.ShowStudent();
+    
+    List<double> newScores = new List<double>();
+    newScores.Add(0);
+    aStudent.SetTestScores(newScores);
+    aStudent.ShowStudent();
     }
 }

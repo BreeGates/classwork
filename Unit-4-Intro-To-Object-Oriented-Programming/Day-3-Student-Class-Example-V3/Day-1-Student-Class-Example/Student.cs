@@ -34,13 +34,13 @@ public class Student
     //       Class data should be initialized in constructors
     private string       studentName;
     private List<double> testScores;
-    
+
     // Define methods for the class
-    
+
     // One special methods for a class is called a constructor
     // A constructor is responsible for initializingthe data in a class
     // (data should never be uninitialized - the starting value needs to be known)
-    
+
     // a constructor method is special because:
     //
     //   1. it has no return type; not even void
@@ -48,10 +48,10 @@ public class Student
     //   3. it may or may not receive parameters (initializers)
     //      ( a constructor with no parameters is called a default constructor)
     //   4. Usually public 
-    
+
     // Define a constructor to initialize our data with values 
     //          specified by the user
-    
+
     // As the class Designer YOU decide what you need to properly initialize objects of the class
     // YOU decide how constructors you need or how users of the class can initialize your objects
     //
@@ -77,19 +77,78 @@ public class Student
         studentName = theName;            // Assign the name passed to the ctor to our studentName
         testScores  = new List<double>(); // Define and assign an empty List to testscores
     }
-    
+
     public Student(string name, List<double> scores)  // 2-arg constructor
                                                    // two parameters used to initialize an object
     {
         studentName = name;   // Set the class data to the data passed in from the user
         testScores  = scores; // Set the class data to the data passed in from the user
     }
-    
+
     /********************************************************************************************
-     * Methods to manipulate the class
+     * Getters and Setters to allow access to our private data
+     *
+     * Getters and Setters are special methods to allow a class controlled access to the data
+     *
+     * Getters return the value in our data memebers
+     * Setters- allow the changinng of data memebers
+     *
+     * By convention: Getters are named GetVariableName
+     *              Setters are named SetVariableName
+     *
+     * Most IDEs will generate Getters and Setters for any data already defined in the class
      *******************************************************************************************/
-    
-    // We need a method to allow the user to add scores to our testScores List
+
+    public string GetStudentName()
+    {
+        return studentName; // return the value in this private member
+    }
+
+    public List<double> GetTestScores()
+    {
+        return testScores; // return the value in this private data member
+    }
+
+    public void SetStudentName(string newName)
+    {
+        studentName = newName;
+    }
+
+    public void SetTestScores(List<double> newScores)
+    {
+        testScores = newScores;
+    }
+/********************************************************************************************
+ * Methods to manipulate the class
+ *******************************************************************************************/
+
+// we need to provide a ToString() method to return a string representation of the class data
+// override indicates you are providing a method that overrides standard C# behaivor
+// the word override is optional
+// toString() should return representation of the data in the class
+// and accept no parameters
+
+public override string ToString()
+{
+  // Define the variable  to hold the return value
+  string theData = "";
+
+  theData = $"Name: {studentName}"; // start with the student name in a string
+  theData += $"Scores";
+  {
+      
+  }
+  foreach (double aScore in testScores)
+  {
+      theData += aScore + aScore + " ";
+  }
+  
+  // return the variable with the result
+  return theData;
+
+}
+
+// We need a method to allow the user to add scores to our testScores List
     // Every method requires a method signature and a body
     // Method signature:   access  return
     //                       type   type   MethodName(parameters)
@@ -120,17 +179,15 @@ public class Student
         // return the variable with the result
         return sum;
     }
-    
+
     // Method compute average score for user
     public double AvgOfScores()
     {
-        return SumOfScores() / testScores.Count; // Using a class method inside another class method
+        // To round a int value to decimal places use Math.Round(value, 3-decimal-places)
+        return Math.Round(SumOfScores() / testScores.Count, 0); // Using a class method inside another class method
     }
-    
-    
-    
-    
-    
+
+
     // Provide a method to display our data
     // (Console.WriteLine() doesn't know how to do it)
     public void ShowStudent()
@@ -143,5 +200,4 @@ public class Student
             Console.Write(score + " ");  // Display on same line
         }
     }
-    
 }
