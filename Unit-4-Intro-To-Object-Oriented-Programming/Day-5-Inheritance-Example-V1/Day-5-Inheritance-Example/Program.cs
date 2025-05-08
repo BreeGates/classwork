@@ -12,7 +12,30 @@ namespace Day_5_Inheritance_Example
         // This is the application program - Main()
         //
         // It will instantiate and manipulate objects of various classes
+// access type ame
+        public class PlayingCard
+        {
+            /***********************
+             * Data memeberss (attributes, properties, variables)
+             */
 
+            //Define instance variables for the class (unique attributes for ech object)
+            //
+            //
+            private int cardValue;
+            private string cardSuit;
+            private string cardColor;
+
+            // To provide access so other can see our data memeber
+            // we can provide 
+
+            get { return cardValue; } // getter return value in cardSuit
+
+            set { cardValue = value; } // setter set cardSuit to value used when assigning
+            {
+                cardSuit = value; // value is keyword representering the value assigned
+            }
+        }
         static void Main(string[] args)
         {
             myFuncs.WriteSeparatorLine("Welcome to our first OOP Example");
